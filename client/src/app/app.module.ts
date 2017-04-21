@@ -10,10 +10,16 @@ import { AppComponent } from './app.component';
 
 // Import the ButtonsModule...
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterationComponent } from './registeration/registeration.component';
+import { ParticipantsComponent } from './participants/participants.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    RegisterationComponent,
+    ParticipantsComponent
   ],
   imports: [
     BrowserModule,
