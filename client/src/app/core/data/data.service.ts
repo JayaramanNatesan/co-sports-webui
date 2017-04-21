@@ -8,12 +8,11 @@ import { corporateEventsSchemas } from './schemas/corporateEventsSchemas';
 export class DataServiceProvider {
     private _corporateEventsDataUrl = '../../../assets/mocks/sportEvents.json';
 
+    
+
     constructor(private http: Http){}
 
     public getAllEventsData(){
         return this.http.get(this._corporateEventsDataUrl).map(data => data.json());
     }
-
-
-
 }

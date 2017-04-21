@@ -3,10 +3,10 @@
     <div class="jumbotron text-capitalize">
     <h2 class="text-primary">{{ events.eventName}}</h2>
     <span>Venue:</span>
-    <p>{{ events.venue }}</p>
+    <p>{{ events.eventVenue }}</p>
     <span>Event Date:</span> 
     <p>{{ events.eventDate }}</p>
-    <button type="button" class="btn btn-default">Register Now</button>
+    <button type="button" class="btn btn-default" [routerLink]="['/events', events.eventID, 'registration']">Register Now</button>
     <button type="button" class="btn btn-primary" [routerLink]="['/events', events.eventID, 'participants']">Participants List</button>
   </div>
 

@@ -3,8 +3,8 @@ export class corporateEventsSchemas {
 }
 
 export class allEvent {
-    eventID: number;
+    eventId: number;
     eventName: string;
-    venue: string;
+    eventVenue: string;
     eventDate: string;
 }

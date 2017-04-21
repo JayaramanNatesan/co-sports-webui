@@ -1,3 +1,27 @@
-<p>
-  registeration works!
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <h2>Registration Form</h2>
+    <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+      <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['employeeName'].valid && complexForm.controls['employeeName'].touched}">
+        <label>Name:</label>
+        <input class="form-control" type="text" placeholder="John" [formControl]="complexForm.controls['employeeName']">
+        <div *ngIf="complexForm.controls['employeeName'].hasError('required') && complexForm.controls['employeeName'].touched" class="alert alert-danger">You must include a Name.</div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['mobileNo'].valid && complexForm.controls['mobileNo'].touched}">
+        <label>Mobile</label>
+        <input class="form-control" type="text" placeholder="Doe" [formControl]="complexForm.controls['mobileNo']">
+        <div *ngIf="complexForm.controls['mobileNo'].hasError('required') && complexForm.controls['mobileNo'].touched" class="alert alert-danger">You must include a Mobile number.</div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['mobileNo'].valid && complexForm.controls['mobileNo'].touched}">
+        <label>Employee Id</label>
+        <input class="form-control" type="text" placeholder="Doe" [formControl]="complexForm.controls['employeeId']">
+        <div *ngIf="complexForm.controls['employeeId'].hasError('required') && complexForm.controls['employeeId'].touched" class="alert alert-danger">You must include a Employee Id.</div>
+      </div>
+   <div class="form-group">
+        <button type="submit" class="btn btn-default">Register</button>
+        <button type="button" class="btn btn-default" routerLink="/home">Cancel</button>
+      </div>
+      
+    </form>
+  </div>
+</div>

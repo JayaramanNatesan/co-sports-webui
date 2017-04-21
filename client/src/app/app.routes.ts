@@ -12,6 +12,9 @@ const routes: Routes = [
         path: "events/:eventId/participants", component: ParticipantsComponent
     },
     {
+        path: "events/:eventId/registration", component: RegisterationComponent
+    },
+    {
         path: '**',
         component: DashboardComponent   
     }

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
@@ -25,6 +26,7 @@ import { ParticipantsComponent } from './participants/participants.component';
     BrowserModule,
      BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     ButtonsModule, GridModule, routing
   ],
