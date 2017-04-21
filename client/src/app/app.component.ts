@@ -11,9 +11,15 @@ import { DataServiceProvider } from './core/data/data.service';
 export class AppComponent {
   title = 'Welcome to Harman Sport Buzz..!';
   public dashboardData: any;
-
+  
   constructor(private data: DataServiceProvider){
+  
     this.data.getAllEventsData().subscribe( data => this.dashboardData = data);
   }
+  
+   onButtonClick() {
+        this.title = 'Hello from Kendo UI!';
+    }
+
 
 }

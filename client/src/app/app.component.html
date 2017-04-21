@@ -1,7 +1,11 @@
-<h1>
-  {{title}}
+<div class="container">
+	<div>
   <div *ngFor="let events of dashboardData">
   {{ events.eventName}}
 </div>
-</h1>
 
+
+<button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
+
+
+<app-participants></app-participants>
