@@ -14,4 +14,6 @@ export class DataServiceProvider {
         return this.http.get(this._corporateEventsDataUrl).map(data => data.json());
     }
 
+
+
 }

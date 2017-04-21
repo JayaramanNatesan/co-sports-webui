@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppComponent } from './app.component';
-
+import { routing } from './app.routes';
 
 // Import the ButtonsModule...
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
@@ -26,7 +26,7 @@ import { ParticipantsComponent } from './participants/participants.component';
      BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    ButtonsModule, GridModule
+    ButtonsModule, GridModule, routing
   ],
   providers: [],
   bootstrap: [AppComponent]
