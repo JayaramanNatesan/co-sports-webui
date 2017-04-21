@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppComponent } from './app.component';
 
@@ -16,7 +16,7 @@ import { ParticipantsComponent } from './participants/participants.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     DashboardComponent,
     RegisterationComponent,
     ParticipantsComponent
@@ -26,7 +26,7 @@ import { ParticipantsComponent } from './participants/participants.component';
      BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    ButtonsModule
+    ButtonsModule, GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

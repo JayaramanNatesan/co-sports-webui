@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { participants1 } from './participants';
+import { participants2 } from './participants';
 
 @Component({
   selector: 'app-participants',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticipantsComponent implements OnInit {
 
-  constructor() { }
+private gridData: any[] = participants2;
+  constructor() { 
+  }
 
   ngOnInit() {
   }
