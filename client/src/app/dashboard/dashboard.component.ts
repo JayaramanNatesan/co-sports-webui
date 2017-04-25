@@ -10,11 +10,11 @@ import { DataServiceProvider } from '../core/data/data.service';
 export class DashboardComponent implements OnInit {
   public dashboardData: any;
   constructor(private data: DataServiceProvider){
-  
-    this.data.getAllEventsData().subscribe( data => this.dashboardData = data);
+
   }
 
   ngOnInit() {
+    this.data.getAllEventsData().subscribe( data => this.dashboardData = data);
   }
 
 }
