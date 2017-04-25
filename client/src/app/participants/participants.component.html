@@ -1,15 +1,15 @@
 <p>
-	participants works!
+	<button type="button" class="btn btn-primary" routerLink="/home">All Events</button>
 </p>
 
 <kendo-grid [data]="gridData" [height]="780">
-	<kendo-grid-column field="EventId" title="EventId" width="80">
+	<kendo-grid-column field="eventId" title="EventId" width="80">
 	</kendo-grid-column>
-	<kendo-grid-column field="Name" title="Name" width="120">
+	<kendo-grid-column field="employeeName" title="Name" width="120">
 	</kendo-grid-column>
-	<kendo-grid-column field="Phone" title="Phone" width="120">
+	<kendo-grid-column field="mobileNo" title="Phone" width="120">
 	</kendo-grid-column>
-	<kendo-grid-column field="EmployeeId" title="EmployeeId" width="120">
+	<kendo-grid-column field="employeeId" title="EmployeeId" width="120">
 	</kendo-grid-column>
 	
 </kendo-grid>
