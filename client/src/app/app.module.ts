@@ -24,7 +24,7 @@ import { ParticipantsComponent } from './participants/participants.component';
   ],
   imports: [
     BrowserModule,
-     BrowserAnimationsModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
