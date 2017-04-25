@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Http, Response } from '@angular/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { validationService } from '../core/validation/validation.service';
 
 @Component({
   selector: 'app-registeration',
@@ -19,8 +20,8 @@ export class RegisterationComponent implements OnInit {
 
   constructor(fb: FormBuilder, private route: ActivatedRoute, private http: Http){
     this.complexForm = fb.group({
-      'employeeName' : [null, Validators.required],
-      'mobileNo': [null,  Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
+      'employeeName' : ['', Validators.required],
+      'mobileNo': ['',  Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10), validationService.phoneNumberValidator])],
       'employeeId' : [null, Validators.required],
      
     })
@@ -44,8 +45,7 @@ export class RegisterationComponent implements OnInit {
     this.routeSub = this.route.params.subscribe(params => {
       this.eventId = +params['eventId'];
       console.log('event ID: ' + this.eventId);
-    }
-    )
+    })
   }
 
 }
